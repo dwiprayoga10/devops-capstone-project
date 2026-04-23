@@ -1,3 +1,7 @@
+# devops-capstone-project
+
+This project is part of a DevOps Capstone. It focuses on building a Customer Accounts microservice using Agile planning, CI/CD, and cloud-native tools.
+
 # DevOps Capstone Template
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
