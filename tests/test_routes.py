@@ -143,6 +143,8 @@ class TestAccountService(TestCase):
         )
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
+        # UPDATE endpoint tested successfully
+
     ######################################################################
     #  D E L E T E
     ######################################################################
