@@ -15,9 +15,9 @@ app.config.from_object(config)
 talisman = Talisman(app)
 CORS(app)
 
-# Import for side effects (routes & handlers)
-from service import routes, models  # noqa: F401
-from service.common import error_handlers, cli_commands  # noqa: F401
+# Import for side effects (keep here!)
+from service import routes, models  # noqa: E402,F401
+from service.common import error_handlers, cli_commands  # noqa: E402,F401
 
 # Logging
 log_handlers.init_logging(app, "gunicorn.error")
