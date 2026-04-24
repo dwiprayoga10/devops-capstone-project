@@ -115,7 +115,7 @@ class TestAccountService(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         data = response.get_json()
         self.assertEqual(len(data), 5)
-    
+
     # LIST endpoint tested successfully
 
     ######################################################################
@@ -156,7 +156,7 @@ class TestAccountService(TestCase):
     def test_delete_account_not_found(self):
         response = self.client.delete(f"{BASE_URL}/999")
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
-    
+
     # DELETE endpoint tested successfully
 
     ######################################################################
