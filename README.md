@@ -1,4 +1,6 @@
-# devops-capstone-project
+# DevOps Capstone Project
+
+![Build Status](https://github.com/dwiprayoga10/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)
 
 This project is part of a DevOps Capstone. It focuses on building a Customer Accounts microservice using Agile planning, CI/CD, and cloud-native tools.
 
