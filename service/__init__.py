@@ -12,27 +12,18 @@ from flask_cors import CORS
 app = Flask(__name__)
 app.config.from_object(config)
 
-# ✅ FIX CSP agar sesuai test
-talisman = Talisman(
-    app,
-    content_security_policy={
-        'default-src': "'self'",
-        'object-src': "'none'"
-    }
-)
-
-# ✅ CORS
+talisman = Talisman(app)
 CORS(app)
 
-# Import routes AFTER app created
-from service import routes, models  # noqa: E402
-from service.common import error_handlers, cli_commands  # noqa: E402
+# Import for side effects (routes & handlers)
+from service import routes, models  # noqa: F401
+from service.common import error_handlers, cli_commands  # noqa: F401
 
 # Logging
 log_handlers.init_logging(app, "gunicorn.error")
 
 app.logger.info("*" * 70)
-app.logger.info("  ACCOUNT SERVICE RUNNING  ".center(70, "*"))
+app.logger.info("ACCOUNT SERVICE RUNNING".center(70, "*"))
 app.logger.info("*" * 70)
 
 try:
