@@ -194,4 +194,4 @@ class TestAccountService(TestCase):
     def test_method_not_allowed(self):
         response = self.client.post(f"{BASE_URL}/1")
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        
+    
